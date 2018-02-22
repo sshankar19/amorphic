@@ -1,6 +1,5 @@
 'use strict';
 let assert = require('chai').assert;
-let Bluebird = require('bluebird');
 let amorphic = require('../../index.js');
 let axios = require('axios');
 let fs = require('fs');
@@ -38,7 +37,7 @@ describe('Run amorphic as a deamon', function() {
     });
 
     it('can download a file', function() {
-        return new Bluebird(function(resolve, reject) {
+        return new Promise(function(resolve, reject) {
             try {
                 resolve(fs.readFileSync(__dirname + '/./apps/daemon/js/DownloadTest.txt'));
             }

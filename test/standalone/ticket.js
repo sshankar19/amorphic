@@ -55,7 +55,7 @@ describe('Ticket System Test Suite', function () {
     });
 
     it ('opens the database', function (done) {
-        var MongoClient = require('mongodb-bluebird');
+        var MongoClient = require('mongodb');
         MongoClient.connect('mongodb://'+mongoHost+':27017/testamorphic').then(function (dbopen) {
             db = dbopen;
             PersistObjectTemplate.setDB(db);
@@ -255,6 +255,3 @@ describe('Ticket System Test Suite', function () {
         });
     });
 });
-
-
-

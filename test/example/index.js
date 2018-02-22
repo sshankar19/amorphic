@@ -1,6 +1,5 @@
 'use strict';
 let assert = require('chai').assert;
-let Promise = require('bluebird');
 let serverAmorphic = require('../../index.js');
 let sinon = require('sinon');
 let axios = require('axios');

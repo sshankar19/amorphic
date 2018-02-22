@@ -21,7 +21,6 @@
 'use strict';
 
 // Node Modules
-let Bluebird = require('bluebird');
 let Semotus = require('semotus');
 let Persistor = require('persistor');   // Only used for the typescript path
 
@@ -47,7 +46,7 @@ Semotus.maxCallTime = 60 * 1000; // Max time for call interlock
  */
 function reset() {
     AmorphicContext.reset();
-    return Bluebird.resolve(true);
+    return Promise.resolve(true);
 }
 
 // TODO: Figure out what this does

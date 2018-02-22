@@ -8,3 +8,5 @@ coverage
 .postgres_8
 .mongo
 .redis
+typescript_tests/**/*.js.map
+typescript_tests/**/*.js

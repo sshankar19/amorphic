@@ -281,9 +281,10 @@ amorphic = // Needs to be global to make mocha tests work
                 }
                 else {
                     var hasChanges = RemoteObjectTemplate.processMessage(message);
-                    Bluebird.delay(50).then(function () {
-                        self.refresh(hasChanges);
-                    }); // Let the promises settle out
+                    new Promise((resolve) => setTimeout(resolve,50))
+                        .then(function () {
+                            self.refresh(hasChanges);
+                        }); // Let the promises settle out
                 }
 
                 if (message.sync === false) {
