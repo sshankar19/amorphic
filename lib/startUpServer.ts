@@ -30,7 +30,7 @@ let fs = require('fs');
  * @param {unknown} appDirectory unknown
  * @param {unknown} sessionRouter unknown
  */
-function startUpServer(preSessionInject, postSessionInject, appList, appStartList, appDirectory, sessionRouter) {
+export function startUpServer(preSessionInject, postSessionInject, appList, appStartList, appDirectory, sessionRouter) {
 
     let controllers = {};
     let downloads;
@@ -115,7 +115,3 @@ function startUpServer(preSessionInject, postSessionInject, appList, appStartLis
 
     appContext.connectServer = app.listen(amorphicOptions.port);
 }
-
-module.exports = {
-    startUpServer: startUpServer
-};

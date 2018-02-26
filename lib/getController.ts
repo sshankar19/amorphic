@@ -30,7 +30,7 @@ let decompressSessionData = require('./session/decompressSessionData').decompres
  *
  * @returns {*}
  */
-function getController(path, controllerPath, initObjectTemplate, connectSession, objectCacheExpiration, sessionStore,
+export function getController(path, controllerPath, initObjectTemplate, connectSession, objectCacheExpiration, sessionStore,
                        newPage, reset, controllerId, req, controllers, nonObjTemplatelogLevel, sessions) {
     let applicationConfig = AmorphicContext.applicationConfig;
     let sessionId = connectSession.id;
@@ -199,7 +199,7 @@ function getController(path, controllerPath, initObjectTemplate, connectSession,
 
             for (let obj in semotusSession.objects) {
                 if (obj.match(/^server-[\w]*?-([0-9]+)/)) {
-                    semotusSession.nextObjId = Math.max(semotusSession.nextObjId, RegExp.$1 + 1);
+                    semotusSession.nextObjId = Math.max(semotusSession.nextObjId, Number(RegExp.$1) + 1);
                 }
             }
 
@@ -230,7 +230,3 @@ function injectTemplatesIntoCurrentSession(source, destination) {
         destination.__dictionary__[templateName] = source.__dictionary__[templateName];
     }
 }
-
-module.exports = {
-    getController: getController
-};

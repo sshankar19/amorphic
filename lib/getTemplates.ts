@@ -24,7 +24,7 @@ let path = require('path');
  *
  * @returns {unknown} unknown
  */
-function getTemplates(persistObjectTemplate, appPath, templates, config, appName) {
+export function getTemplates(persistObjectTemplate, appPath, templates, config, appName) {
 
     let amorphicOptions = AmorphicContext.amorphicOptions;
     let applicationSource = AmorphicContext.applicationSource;
@@ -353,8 +353,3 @@ function requireTemplate(prop, template, requiredTemplates) {
 function isTemplateOnClient(template) {
     return template.__toClient__ || typeof(template.__toClient__) === 'undefined';
 }
-
-
-module.exports = {
-    getTemplates: getTemplates
-};

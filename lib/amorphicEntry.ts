@@ -16,7 +16,7 @@ let Bluebird = require('bluebird');
  * @param {unknown} resp unknown
  * @param {unknown} next unknown
  */
-function amorphicEntry(sessions, controllers, nonObjTemplatelogLevel, req, resp, next) {
+export function amorphicEntry(sessions, controllers, nonObjTemplatelogLevel, req, resp, next) {
     let amorphicOptions;
     let applicationSource;
     let applicationSourceMap;
@@ -124,7 +124,3 @@ function amorphicEntry(sessions, controllers, nonObjTemplatelogLevel, req, resp,
             });
     }
 }
-
-module.exports = {
-    amorphicEntry: amorphicEntry
-};

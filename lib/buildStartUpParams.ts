@@ -9,7 +9,7 @@ let AmorphicContext = require('./AmorphicContext');
  *
  * @param {unknown} configStore unknown
  */
-function buildStartUpParams(configStore) {
+export function buildStartUpParams(configStore) {
     let amorphicOptions = AmorphicContext.amorphicOptions || {};
     let rootCfg = configStore['root'];
 
@@ -32,7 +32,3 @@ function buildStartUpParams(configStore) {
         console.warn('WARNING you are starting amorphic with no sessionSecret. The default sessionSecret "swat_team" will be used.');
     }
 }
-
-module.exports = {
-    buildStartUpParams: buildStartUpParams
-};

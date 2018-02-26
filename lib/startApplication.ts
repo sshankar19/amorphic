@@ -24,7 +24,7 @@ let superType = require('supertype');
  *
  * @returns {unknown} unknown
  */
-function startApplication(appName, appDirectory, appList, configStore, sessionStore) {
+export function startApplication(appName, appDirectory, appList, configStore, sessionStore) {
 
     let path = appDirectory + '/' + appList[appName] + '/';
     let commonPath = appDirectory + '/apps/common/';
@@ -62,7 +62,7 @@ function startApplication(appName, appDirectory, appList, configStore, sessionSt
  *
  * @returns {Function} A bound function to be used when loading templates.
  */
-function setUpInjectObjectTemplate(appName, config, schema) {
+export function setUpInjectObjectTemplate(appName, config, schema) {
     let amorphicOptions = AmorphicContext.amorphicOptions || {};
     let dbConfig = buildDbConfig(appName, config);
     let connectToDbIfNeedBe = Bluebird.resolve(false); // Default to no need.
@@ -241,7 +241,7 @@ function loadTemplates(appName) {
     let controllerPath = (appConfig.appConfig.controller || 'controller.js');
     let matches = controllerPath.match(/(.*?)([0-9A-Za-z_]*)\.js$/);
     let prop = matches[2];
-    let baseTemplate = buildBaseTemplate(appConfig);
+    let baseTemplate = buildBaseTemplate(appConfig, false);
 
     applicationSource[appName] = '';
     applicationSourceMap[appName] = '';
@@ -380,7 +380,5 @@ function startDaemon(persistableTemplate, MainControllerTemplate) {
     controller.serverInit();
 }
 
-// This pattern avoids circular reference issues
+// This pattern avoids circular reference issues (exports)
 // TODO: Why?
-module.exports.startApplication = startApplication;
-module.exports.setUpInjectObjectTemplate = setUpInjectObjectTemplate;

@@ -8,3 +8,5 @@ coverage
 .postgres_8
 .mongo
 .redis
+dist-server/**/*
+.vscode/

@@ -23,7 +23,7 @@ let Bluebird = require('bluebird');
  * @param {unknown} postSessionInject unknown
  * @param {unknown} sendToLogFunction unknown
  */
-function listen(appDirectory, sessionStore, preSessionInject, postSessionInject, sendToLogFunction) {
+export function listen(appDirectory, sessionStore, preSessionInject, postSessionInject, sendToLogFunction) {
 
     let builder = new ConfigBuilder(new ConfigApi());
     let configStore = builder.build(appDirectory);
@@ -74,7 +74,3 @@ function listen(appDirectory, sessionStore, preSessionInject, postSessionInject,
             logMessage(e.message + ' ' + e.stack);
         });
 }
-
-module.exports = {
-    listen: listen
-};

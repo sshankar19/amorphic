@@ -6,7 +6,7 @@ let AmorphicContext = require('./AmorphicContext');
 let amorphicOptions = AmorphicContext.amorphicOptions;
 
 // TODO: Audit all the parameters of the function.
-function getTemplate(file, options, uses,
+export function getTemplate(file, options, uses,
                      ignoringClient, requiredTemplates, referencedTemplates, mixinGraph, filesNeeded, appPath, appName,
                      persistObjectTemplate, config, mixins, fileInitializers, filePaths,
                      applicationSourceCandidate, currentContext, UsesV2ReturnPass1) {
@@ -278,7 +278,7 @@ function getTemplate(file, options, uses,
 
     }
 }
-function recordStatics(persistObjectTemplate, requiredTemplates, initializerReturnValues, fileNoExt) {
+export function recordStatics(persistObjectTemplate, requiredTemplates, initializerReturnValues, fileNoExt) {
     for (let returnVariable in initializerReturnValues) {
         if (!persistObjectTemplate.__dictionary__[returnVariable]) {
             if (!requiredTemplates[fileNoExt]) {
@@ -314,5 +314,3 @@ function recordStatics(persistObjectTemplate, requiredTemplates, initializerRetu
         }
     }
 }
-
-module.exports = {getTemplate: getTemplate, recordStatics: recordStatics};
