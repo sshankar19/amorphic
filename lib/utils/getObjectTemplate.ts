@@ -7,4 +7,4 @@ function getObjectTemplate(controller) {
     return controller.__objectTemplate__ || controller.__template__.objectTemplate;
 }
 
-module.exports = getObjectTemplate;
+export = getObjectTemplate;

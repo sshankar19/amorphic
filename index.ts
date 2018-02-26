@@ -138,7 +138,8 @@ let toExport = {
     Remoteable: Remoteable,
 	Bindable: Bindable,
     Persistable: Persistor.Persistable,
-    Persistor: Persistor.Persistor
+    Persistor: Persistor.Persistor,
+    bindDecorators: undefined // for typing
     // Additional decorators added here by the subsequent bindDecorators call
 };
 
@@ -152,4 +153,4 @@ Object.defineProperty(toExport.Remoteable.prototype, 'amorphic', {get: function 
     return this.__objectTemplate__;
 }});
 
-module.exports = toExport;
+export = toExport;

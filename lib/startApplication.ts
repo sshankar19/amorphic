@@ -380,5 +380,4 @@ function startDaemon(persistableTemplate, MainControllerTemplate) {
     controller.serverInit();
 }
 
-// This pattern avoids circular reference issues (exports)
-// TODO: Why?
+// This pattern avoids circular reference issues (exports) TODO: Why?
