@@ -12,4 +12,4 @@ function flattenTemplates(requiredTemplates) {
     return classes;
 }
 
-export = flattenTemplates;
+module.exports = flattenTemplates;

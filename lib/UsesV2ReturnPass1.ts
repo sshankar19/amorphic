@@ -9,4 +9,4 @@ function UsesV2ReturnPass1(base, prop) {
 
 UsesV2ReturnPass1.prototype.mixin = function mixin() {};
 
-export = UsesV2ReturnPass1;
+module.exports = UsesV2ReturnPass1;

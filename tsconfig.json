@@ -5,14 +5,13 @@
     "./client.ts"
   ],
   "compilerOptions": {
-    "outDir": "./dist-server",
     "module": "commonjs",
     "moduleResolution": "node",
     "allowJs": true,
     "target": "es5",
     "lib": [
       "dom",
-      "es6",
+      "es7",
       "es2015.promise"
     ],
     "noImplicitAny": false,

@@ -153,4 +153,4 @@ Object.defineProperty(toExport.Remoteable.prototype, 'amorphic', {get: function 
     return this.__objectTemplate__;
 }});
 
-export = toExport;
+module.exports = toExport;
