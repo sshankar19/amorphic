@@ -41,7 +41,7 @@ var controllerRequires;
 var Controller;
 var serverAmorphic = require('../../index.js');
 
-// Fire up amrophic as the client
+// Fire up amorphic as the client
 require('../../client.js');
 
 function afterEachDescribe(done) {

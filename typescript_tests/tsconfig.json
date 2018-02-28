@@ -1,19 +1,24 @@
-
 {
+    "include": [
+        "./apps/**/*",
+        "./unittest.ts"
+    ],
     "compilerOptions": {
         "module": "commonjs",
+        "moduleResolution": "node",
         "target": "es5",
         "lib": [
             "dom",
-            "es5",
+            "es7",
             "es2015.promise"
         ],
-      "noImplicitAny": false,
-      "sourceMap": true,
-      "typeRoots": [
-        "../node_modules/@types"
-      ],
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     }
-  }
+}

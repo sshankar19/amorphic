@@ -255,6 +255,3 @@ describe('Ticket System Test Suite', function () {
         });
     });
 });
-
-
-
