@@ -11,6 +11,30 @@ export class AmorphicSession extends SupertypeSession {
     reqSession: any;
     expireSession(): any {};
 }
+export function Remoteable<BC extends Constructable<{}>>(Base: BC) {
+    return class extends Base {
+        amorphicate (obj : any) {}
+        amorphic : AmorphicSession
+    };
+}
+export type amorphicStaticType = {
+    logger : SupertypeLogger;
+    config : any;
+    beginDefaultTransaction() : any;
+    beginTransaction(nodefault? : boolean) : any;
+    endTransaction(persistorTransaction?, logger?) : any;
+    begin (isdefault?) : any;
+    end (persistorTransaction?, logger?) : any;
+    commit (options?) : any;
+    createTransientObject(callback : any) : any;
+    __transient__ : any;
+    __dictionary__: any;
+    debugInfo: any;
+    reqSession: any;
+    getClasses(): any;
+    syncAllTables(): any;
+    getInstance(): any;
+}
 export class amorphicStatic {
     static logger : SupertypeLogger;
     static config : any;
@@ -28,11 +52,4 @@ export class amorphicStatic {
     static getClasses(): any {};
     static syncAllTables(): any {};
     static getInstance(): any {};
-}
-
-export function Remoteable<BC extends Constructable<{}>>(Base: BC) {
-    return class extends Base {
-        amorphicate (obj : any) {}
-        amorphic : AmorphicSession
-    };
 }

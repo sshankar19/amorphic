@@ -20,7 +20,6 @@
     "supertype": "2.2.*",
     "uglify-js": "2.7.5"
   },
-  "main": "./amorphic.js",
   "devDependencies": {
     "@types/chai": "4.0.4",
     "@types/mocha": "2.2.43",
@@ -48,7 +47,7 @@
     "prepublish": "npm run build",
     "test": "istanbul cover _mocha -- test/* -R spec",
     "test:trace": "mocha test/*",
-    "test:debug": "_mocha --debug-brk test/V2/amorphic.js",
+    "test:debug": "_mocha --debug-brk test/*",
     "test:config": "mocha test/config", 
     "test:example": "mocha test/example",
     "test:typescript": "_mocha --debug-brk typescript_tests/unittest.js",
