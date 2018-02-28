@@ -20,6 +20,7 @@
     "supertype": "2.2.*",
     "uglify-js": "2.7.5"
   },
+  "main": "./amorphic.js",
   "devDependencies": {
     "@types/chai": "4.0.4",
     "@types/mocha": "2.2.43",
@@ -43,10 +44,11 @@
     "build:tstests": "node_modules/typescript/bin/tsc -p typescript_tests",
     "clean:tstests": "rm -Rf typescript_tests/*.js && rm -Rf typescript_tests/*.js.map && rm -Rf typescript_tests/apps/**/*.js && rm -Rf typescript_tests/apps/**/*.js.map",
     "lint": "eslint .",
+    "testCommand": "npm run build && npm run clean",
     "prepublish": "npm run build",
     "test": "istanbul cover _mocha -- test/* -R spec",
     "test:trace": "mocha test/*",
-    "test:debug": "_mocha --debug-brk test/*",
+    "test:debug": "_mocha --debug-brk test/V2/amorphic.js",
     "test:config": "mocha test/config", 
     "test:example": "mocha test/example",
     "test:typescript": "_mocha --debug-brk typescript_tests/unittest.js",
