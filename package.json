@@ -4,7 +4,7 @@
   "homepage": "https://github.com/selsamman/amorphic",
   "version": "2.4.8",
   "dependencies": {
-    "amorphic-bindster": "2.0.*",
+    "amorphic-bindster": "2.0.1",
     "bluebird": "3.5.1",
     "body-parser": "1.18.2",
     "compression": "1.7.1",
@@ -14,10 +14,10 @@
     "formidable": "1.1.1",
     "mongodb-bluebird": "0.1.2",
     "nconf": "0.8.5",
-    "persistor": "2.3.*",
-    "semotus": "2.3.*",
+    "persistor": "2.3.6",
+    "semotus": "2.3.8",
     "serve-static": "1.13.1",
-    "supertype": "2.2.*",
+    "supertype": "2.2.4",
     "uglify-js": "2.7.5"
   },
   "devDependencies": {
