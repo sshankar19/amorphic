@@ -7,7 +7,7 @@
     "amorphic-bindster": "2.0.*",
     "bluebird": "3.5.1",
     "body-parser": "1.18.2",
-    "compression": "1.7.1",
+    "compression": "1.7.4",
     "connect": "3.6.5",
     "cookie-parser": "1.4.3",
     "express-session": "1.15.6",
