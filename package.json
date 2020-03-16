@@ -6,7 +6,7 @@
   "dependencies": {
     "amorphic-bindster": "2.0.*",
     "bluebird": "3.5.1",
-    "body-parser": "1.18.2",
+    "body-parser": "1.19.0",
     "compression": "1.7.1",
     "connect": "3.6.5",
     "cookie-parser": "1.4.3",
