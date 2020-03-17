@@ -28,7 +28,7 @@
     "mocha": "4.0.1",
     "mock-fs": "4.4.1",
     "request": "2.83.0",
-    "sinon": "4.0.1",
+    "sinon": "4.5.0",
     "xmlhttprequest-cookie": "0.9.4",
     "@types/chai": "4.0.4",
     "@types/mocha": "2.2.43",
