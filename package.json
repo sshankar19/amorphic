@@ -27,7 +27,7 @@
     "istanbul": "0.4.5",
     "mocha": "4.0.1",
     "mock-fs": "4.4.1",
-    "request": "2.83.0",
+    "request": "2.88.2",
     "sinon": "4.0.1",
     "xmlhttprequest-cookie": "0.9.4",
     "@types/chai": "4.0.4",
