@@ -26,7 +26,7 @@
     "eslint": "4.9.0",
     "istanbul": "0.4.5",
     "mocha": "4.0.1",
-    "mock-fs": "4.4.1",
+    "mock-fs": "4.14.0",
     "request": "2.83.0",
     "sinon": "4.0.1",
     "xmlhttprequest-cookie": "0.9.4",
