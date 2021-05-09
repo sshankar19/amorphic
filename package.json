@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "axios": "0.17.0",
-    "chai": "4.1.2",
+    "chai": "4.3.4",
     "eslint": "4.9.0",
     "istanbul": "0.4.5",
     "mocha": "4.0.1",
@@ -30,7 +30,7 @@
     "request": "2.83.0",
     "sinon": "4.0.1",
     "xmlhttprequest-cookie": "0.9.4",
-    "@types/chai": "4.0.4",
+    "@types/chai": "4.2.18",
     "@types/mocha": "2.2.43",
     "@types/node": "8.0.46",
     "typescript": "2.5.3",
